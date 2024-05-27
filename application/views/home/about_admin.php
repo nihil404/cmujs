@@ -14,10 +14,55 @@
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="<?php echo base_url ('css/home/styles.css" rel="stylesheet')?>" />
+
+
+        <style>
+
+body {
+    background-color: #ffffff; /* White background */
+    color: green; /* Black text */
+}
+.bg-dark-green {
+    background-color: #006400; /* Dark green color code */
+}
+.btn-dark-green {
+    background-color: #006400; /* Dark green color code */
+    border-color: #006400; /* Dark green color code */
+    color: #fff; /* Text color */
+    transition: all 0.3s; /* Smooth transition */
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3); /* Add box-shadow for 3D effect */
+}
+
+.btn-dark-green:hover {
+    background-color: #004d00; /* Darker shade of green on hover */
+    border-color: #004d00; /* Darker shade of green on hover */
+    color: #fff; /* Text color on hover */
+    transform: translateY(-2px); /* Move button up slightly on hover for 3D effect */
+}
+
+.card {
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1); /* Add box-shadow to card for 3D effect */
+    max-width: 500px; /* Adjust the maximum width of the card */
+    margin: auto; /* Center the card horizontally */
+    padding: 20px; /* Add some padding */
+}
+
+.text-green .nav-link {
+    color: green !important;
+}
+
+.bg-yellow {
+    background-color: #e6b400 !important;
+}
+.navbar {
+margin: 0 auto;
+}
+
+</style>
     </head>
     <body>
         <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-yellow" style="max-width: 80%; height: 55px;">
     <div class="container px-4 px-lg-5">
         <a class="navbar-brand" href="<?php echo base_url('home/home_admin'); ?>">CMU JS</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,7 +74,6 @@
                 <!-- Your existing menu items -->
                 <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="<?php echo base_url('home/home_admin'); ?>">Home</a></li>
                 <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="<?php echo base_url('home/about_admin'); ?>">About</a></li>
-                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="<?php echo base_url('home/contact_admin'); ?>">Contact</a></li>
             </ul>
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <!-- Separate "Login" and "Register" links -->

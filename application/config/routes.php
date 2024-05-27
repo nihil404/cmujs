@@ -44,6 +44,13 @@ $route['volume/db_Volumes'] = 'volume/db_Volumes';
 $route['volume/db_createVolumes'] = 'volume/db_createVolumes';
 $route['volume/db_editVolume'] = 'volume/db_editVolume';
 $route['Users/db_Users'] = 'Users/db_Users';
+$route['pages/db_authorList'] = 'pages/db_authorList';
+$route['pages/editArticle'] = 'pages/editArticle';
+$route['pages/add_author'] = 'pages/add_author';
+$route['pages/edit_author'] = 'pages/edit_author';
+
+
+$route['pages/editArticle/(:any)'] = 'pages/editArticle/$1';
 
 
 // Posts

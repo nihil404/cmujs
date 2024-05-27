@@ -11,7 +11,6 @@
     <title>CMU JS</title>
     <link rel="canonical" href="https://www.wrappixel.com/templates/ample-admin-lite/" />
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="<?php echo base_url('assets/img/cmujus.png')?>">
     <!-- Custom CSS -->
     <link href="<?php echo base_url('plugins/bower_components/chartist/dist/chartist.min.css') ?>" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo base_url('plugins/bower_components/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.css') ?>">
@@ -51,19 +50,19 @@
     <!-- ============================================================== -->
     <!-- Main wrapper - style you can find in pages.scss -->
     <!-- ============================================================== -->
-    <div id="main-wrapper" data-layout="vertical" data-navbarbg="skin5" data-sidebartype="full" data-sidebar-position="absolute" data-header-position="absolute" data-boxed-layout="full">
+    <div id="main-wrapper" data-layout="vertical" data-navbarbg="skin5" data-sidebartype="full" data-sidebar-position="absolute" data-header-position="absolute" data-boxed-layout="full" style="background-color: #e6b400;">
         <!-- ============================================================== -->
         <!-- Topbar header - style you can find in pages.scss -->
         <!-- ============================================================== -->
-        <header class="topbar" data-navbarbg="skin5">
-            <nav class="navbar top-navbar navbar-expand-md navbar-dark">
+        <header class="topbar" data-navbarbg="skin5" style="background-color: green;">
+            <nav class="navbar top-navbar navbar-expand-md navbar-dark" style="background-color: #e6b400;">
                 <div class="navbar-header" data-logobg="skin6">
                     <!-- ============================================================== -->
                     <!-- Logo -->
-                    <a class="navbar-brand" href="<?php echo base_url('home/home_admin'); ?>">
+                    <a class="navbar-brand"  style="background-color: #e6b400;" href="<?php echo base_url('home/home_admin'); ?>">
     <!-- Logo text -->
-    <span class="logo-text" style="color: #006400; font-weight: 1000; font-size: 35px; margin-left: 40px;">
-        CMU JS
+    <a class="navbar-brand" href="<?php echo base_url('home/home_admin'); ?>"><img src="../images/cmujournallogo.png"  style="width: 150px; height: 40px;"></a>
+
     </span>
 </a>
 
@@ -79,22 +78,12 @@
                 <!-- ============================================================== -->
                 <!-- End Logo -->
                 <!-- ============================================================== -->
-                <div class="navbar-collapse collapse" id="navbarSupportedContent" data-navbarbg="skin5">
+                <div class="navbar-collapse collapse"  style="background-color:green;" id="navbarSupportedContent" data-navbarbg="skin5">
                     <!-- ============================================================== -->
                     <!-- Right side toggle and nav items -->
                     <!-- ============================================================== -->
-                    <ul class="navbar-nav ms-auto d-flex align-items-center">
-                        <!-- ============================================================== -->
-                        <!-- Search -->
-                        <!-- ============================================================== -->
-                        <li class=" in">
-                            <form role="search" class="app-search d-none d-md-block me-3">
-                                <input type="text" placeholder="Search..." class="form-control mt-0">
-                                <a href="" class="active">
-                                    <i class="fa fa-search"></i>
-                                </a>
-                            </form>
-                        </li>
+                    <ul class="navbar-nav ms-auto d-flex align-items-center" >
+
                         <!-- ============================================================== -->
                         <!-- User profile and search -->
                         <!-- ============================================================== -->
@@ -129,21 +118,21 @@
         <!-- ============================================================== -->
         <!-- Left Sidebar - style you can find in sidebar.scss  -->
         <!-- ============================================================== -->
-        <aside class="left-sidebar" data-sidebarbg="skin6">
+        <aside class="left-sidebar" data-sidebarbg="skin6" style="background-color: #e6b400;">
             <!-- Sidebar scroll-->
-            <div class="scroll-sidebar">
+            <div class="scroll-sidebar" style="background-color: #e6b400;">
                 <!-- Sidebar navigation-->
-                <nav class="sidebar-nav">
-                    <ul id="sidebarnav">
+                <nav class="sidebar-nav" style="background-color: #e6b400;">
+                    <ul id="sidebarnav" style="background-color: #e6b400;">
                         <!-- User Profile-->
                         <li class="sidebar-item pt-2">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?php echo base_url('pages/dashboard_admin') ?>" aria-expanded="false">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?php echo base_url('pages/dashboard_admin') ?>" aria-expanded="false" style="background-color: #e6b400;">
                                 <i class="far fa-clock" aria-hidden="true"></i>
                                 <span class="hide-menu"><strong>Dashboard</strong></span>
                             </a>
                         </li>
                        
-                        <li class="sidebar-item">
+                        <li class="sidebar-item" >
                             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?php echo base_url('pages/db_allArticles') ?>" aria-expanded="false">
                                 <i class="fa fa-table" aria-hidden="true"></i>
                                 <span class="hide-menu">Articles</span>
@@ -157,7 +146,7 @@
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link"href="<?php echo base_url('users/db_Users') ?>" aria-expanded="false">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?php echo base_url('users/db_Users') ?>" aria-expanded="false">
                                 <i class="fa fa-user" aria-hidden="true"></i>
                                 <span class="hide-menu">Users List</span>
                             </a>
@@ -182,6 +171,9 @@
                         </li>
                 
                 
+                        <li class="text-center p-20 upgrade-btn">
+
+                        </li>
                     </ul>
                 </nav>
                 <!-- End Sidebar navigation -->
@@ -194,7 +186,7 @@
         <!-- ============================================================== -->
         <!-- Page wrapper  -->
         <!-- ============================================================== -->
-        <div class="page-wrapper">
+        <div class="page-wrapper" >
             <!-- ============================================================== -->
             <!-- Bread crumb and right sidebar toggle -->
             <!-- ============================================================== -->
@@ -208,7 +200,7 @@
                             <ol class="breadcrumb ms-auto">
                                 <li><a href="#" class="fw-normal">Dashboard</a></li>
                             </ol>
-                            <a href="#" target="_blank" class="btn btn-darkgreen text-white d-none d-md-inline-block"><strong>CMU JS</strong></a>                 
+                            <a href="#" target="_blank" class="btn btn-darkgreen text-white d-none d-md-inline-block">CMUjs</a>                 
                         </div>
                     </div>
                 </div>

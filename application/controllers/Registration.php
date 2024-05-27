@@ -62,7 +62,7 @@ class Registration extends CI_Controller {
                 $this->user_model->insertuser($data);
                 $this->session->set_flashdata('success', 'Registration Successful! Please wait for an email notification once your account has been reviewed and approved for login.');
     
-                redirect(base_url('registration/registration_confirm'));
+                redirect(base_url(''));
             }
         }
     }

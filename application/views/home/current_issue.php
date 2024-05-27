@@ -31,7 +31,6 @@ a<!DOCTYPE html>
                 <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="<?php echo base_url(); ?>">Home</a></li>
                 <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="<?php echo base_url('home/about'); ?>">About</a></li>
                 <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="<?php echo base_url('home/post'); ?>">Current Issue</a></li>
-                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="<?php echo base_url('home/contact'); ?>">Contact</a></li>
             </ul>
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <!-- Separate "Login" and "Register" links -->

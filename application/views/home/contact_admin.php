@@ -29,7 +29,6 @@
                 <!-- Your existing menu items -->
                 <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="<?php echo base_url('home/home_admin'); ?>">Home</a></li>
                 <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="<?php echo base_url('home/about_admin'); ?>">About</a></li>
-                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="<?php echo base_url('home/contact_admin'); ?>">Contact</a></li>
             </ul>
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <!-- Separate "Login" and "Register" links -->
@@ -54,7 +53,6 @@
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
                     <div class="site-heading">
-                    <h1>Contact Us</h1>
                             <span class="subheading">Have questions? We have answers.</span>
                         </div>
                     </div>

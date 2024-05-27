@@ -26,7 +26,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 // In your config/config.php file
 
 // Set the base URL
-$config['base_url'] = 'http://localhost/journal/';
+$config['base_url'] = 'http://172.16.7.200/journal/';
 
 
 /*

@@ -11,7 +11,6 @@
     <title>CMU JS</title>
     <link rel="canonical" href="https://www.wrappixel.com/templates/ample-admin-lite/" />
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="<?php echo base_url('assets/img/cmujus.png')?>">
     <!-- Custom CSS -->
     <link href="<?php echo base_url('plugins/bower_components/chartist/dist/chartist.min.css') ?>" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo base_url('plugins/bower_components/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.css') ?>">
@@ -42,7 +41,7 @@
     <!-- ============================================================== -->
     <!-- Preloader - style you can find in spinners.css -->
     <!-- ============================================================== -->
-    <div class="preloader">
+    <div class="preloader"  >
         <div class="lds-ripple">
             <div class="lds-pos"></div>
             <div class="lds-pos"></div>
@@ -51,20 +50,19 @@
     <!-- ============================================================== -->
     <!-- Main wrapper - style you can find in pages.scss -->
     <!-- ============================================================== -->
-    <div id="main-wrapper" data-layout="vertical" data-navbarbg="skin5" data-sidebartype="full" data-sidebar-position="absolute" data-header-position="absolute" data-boxed-layout="full">
+    <div id="main-wrapper" data-layout="vertical" data-navbarbg="skin5" data-sidebartype="full" data-sidebar-position="absolute" data-header-position="absolute" data-boxed-layout="full" style="background-color: green;">
         <!-- ============================================================== -->
         <!-- Topbar header - style you can find in pages.scss -->
         <!-- ============================================================== -->
-        <header class="topbar" data-navbarbg="skin5">
-            <nav class="navbar top-navbar navbar-expand-md navbar-dark">
-                <div class="navbar-header" data-logobg="skin6">
+        <header class="topbar" data-navbarbg="skin5" style="background-color: green;">
+            <nav class="navbar top-navbar navbar-expand-md navbar-dark" style="background-color: green;">
+                <div class="navbar-header" data-logobg="skin6" style="background-color: #e6b400;">
                     <!-- ============================================================== -->
                     <!-- Logo -->
                     <a class="navbar-brand" href="<?php echo base_url('home/home_lp'); ?>">
     <!-- Logo text -->
-    <span class="logo-text" style="color: #006400; font-weight: 1000; font-size: 35px; margin-left: 40px;">
-        CMU JS
-    </span>
+    <a class="navbar-brand" href="<?php echo base_url('home/home_admin'); ?>"><img src="../images/cmujournallogo.png"  style="width: 150px; height: 40px;"></a>
+
 </a>
 
 
@@ -79,22 +77,15 @@
                 <!-- ============================================================== -->
                 <!-- End Logo -->
                 <!-- ============================================================== -->
-                <div class="navbar-collapse collapse" id="navbarSupportedContent" data-navbarbg="skin5">
+                <div class="navbar-collapse collapse" id="navbarSupportedContent" data-navbarbg="skin5" style="background-color: green;">
                     <!-- ============================================================== -->
                     <!-- Right side toggle and nav items -->
                     <!-- ============================================================== -->
-                    <ul class="navbar-nav ms-auto d-flex align-items-center">
+                    <ul class="navbar-nav ms-auto d-flex align-items-center" style="background-color: green;">
                         <!-- ============================================================== -->
                         <!-- Search -->
                         <!-- ============================================================== -->
-                        <li class=" in">
-                            <form role="search" class="app-search d-none d-md-block me-3">
-                                <input type="text" placeholder="Search..." class="form-control mt-0">
-                                <a href="" class="active">
-                                    <i class="fa fa-search"></i>
-                                </a>
-                            </form>
-                        </li>
+              
                         <!-- ============================================================== -->
                         <!-- User profile and search -->
                         <!-- ============================================================== -->
@@ -111,7 +102,6 @@
     </a>
     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
         <li><a class="dropdown-item" href="<?php echo base_url('pages/db_authProfile'); ?>">Profile</a></li>
-        <li><a class="dropdown-item" href="<?php echo base_url('registration/logOut'); ?>">Logout</a></li>
     </ul>
 </li>
 
@@ -129,37 +119,37 @@
         <!-- ============================================================== -->
         <!-- Left Sidebar - style you can find in sidebar.scss  -->
         <!-- ============================================================== -->
-        <aside class="left-sidebar" data-sidebarbg="skin6">
+        <aside class="left-sidebar" data-sidebarbg="skin6" style="background-color: #e6b400;">
             <!-- Sidebar scroll-->
-            <div class="scroll-sidebar">
+            <div class="scroll-sidebar" style="background-color: #e6b400;">
                 <!-- Sidebar navigation-->
-                <nav class="sidebar-nav">
-                    <ul id="sidebarnav">
+                <nav class="sidebar-nav" >
+                    <ul id="sidebarnav" style="background-color: #e6b400;">
                         <!-- User Profile-->
                         <li class="sidebar-item pt-2">
                             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?php echo base_url('pages/dashboard_authors') ?>" aria-expanded="false">
                                 <i class="far fa-clock" aria-hidden="true"></i>
-                                <span class="hide-menu"><strong>Dashboard</strong></span>
+                                <span class="hide-menu" style="color: green; font-size: 14px"><strong>Dashboard</strong></span>
                             </a>
                         </li>
                        
                         <li class="sidebar-item">
                             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?php echo base_url('pages/db_authArticles') ?>" aria-expanded="false">
                                 <i class="fa fa-table" aria-hidden="true"></i>
-                                <span class="hide-menu">Articles</span>
+                                <span class="hide-menu" style="color: green; font-size: 14px">Articles</span>
                             </a>
                         </li>
                         
                         <li class="sidebar-item">
                             <a class="sidebar-link waves-effect waves-dark sidebar-link"href="<?php echo base_url('pages/db_authProfile') ?>" aria-expanded="false">
                                 <i class="fa fa-user" aria-hidden="true"></i>
-                                <span class="hide-menu">User Profile</span>
+                                <span class="hide-menu" style="color: green; font-size: 14px">User Profile</span>
                             </a>
                         </li>
                         <li class="sidebar-item">
                             <a class="sidebar-link waves-effect waves-dark sidebar-link"href="<?php echo base_url('pages/db_AuthorProf') ?>" aria-expanded="false">
                                 <i class="fa fa-user" aria-hidden="true"></i>
-                                <span class="hide-menu">Author Profile</span>
+                                <span class="hide-menu"style="color: green; font-size: 14px">Author Profile</span>
                             </a>
                         </li>
                 
@@ -167,6 +157,14 @@
                         <a href="<?php echo base_url('pages/db_authSubmission') ?>" class="btn btn-darkgreen text-white" target="_blank" fontstyle="bold"><strong>MAKE A SUBMISSION</strong></a>
 
                         </li>
+                        <li style="margin-top: 230px; margin-left: 30">
+    <a class="dropdown-item" href="<?php echo base_url('registration/logOut'); ?>" style="color: green; text-align: left; font-size: 14px">
+        <img src="<?php echo base_url('images/logout.png');?>" alt="logout" title="logout" style="vertical-align: middle;"> Logout
+    </a>
+</li>
+
+
+
                     </ul>
                 </nav>
                 <!-- End Sidebar navigation -->
@@ -186,14 +184,11 @@
             <div class="page-breadcrumb bg-white">
                 <div class="row align-items-center">
                     <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                        <h4 class="page-title">Dashboard</h4>
                     </div>
                     <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
                         <div class="d-md-flex">
                             <ol class="breadcrumb ms-auto">
-                                <li><a href="#" class="fw-normal">Dashboard</a></li>
                             </ol>
-                            <a href="#" target="_blank" class="btn btn-darkgreen text-white d-none d-md-inline-block"><strong>CMU JS</strong></a>                 
                         </div>
                     </div>
                 </div>

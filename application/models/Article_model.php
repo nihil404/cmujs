@@ -58,7 +58,7 @@ public function get_article_id() {
     }
 }
 public function get_article() {
-    $this->db->select('articles.articleid, articles.title, articles.slug, articles.abstract, articles.created_at, volume.vol_name, articles.doi, articles.keywords');
+    $this->db->select('articles.articleid, articles.title, articles.filename, articles.slug, articles.abstract, articles.created_at, volume.vol_name, articles.doi, articles.keywords');
     $this->db->from('articles');
     $this->db->join('article_submission', 'articles.slug = article_submission.slug');
     $this->db->join('volume', 'articles.volumeid = volume.volumeid', 'left');
@@ -76,7 +76,7 @@ public function get_article() {
 
 
 public function get_article_slug($slug) {
-    $this->db->select('articles.articleid, articles.title, articles.slug, articles.abstract, articles.created_at, volume.vol_name, articles.doi, articles.keywords');
+    $this->db->select('articles.articleid, articles.filename, articles.title, articles.slug, articles.abstract, articles.created_at, volume.vol_name, articles.doi, articles.keywords');
     $this->db->from('articles');
     $this->db->join('volume', 'articles.volumeid = volume.volumeid', 'left');
     $this->db->where('articles.slug', $slug);
@@ -164,7 +164,7 @@ public function updateArticle($data, $slug) {
 public function get_article_by_id($articleid) {
     $this->db->select('articles.articleid, articles.title, article_submission.filename, article_submission.payment, article_submission.date_paid, article_submission.review, article_submission.date_forwarded_review, article_submission.approved, article_submission.date_approved, article_submission.published, article_submission.date_published');
     $this->db->from('article_submission');
-    $this->db->join('articles', 'articles.slug = article_submission.slug'); // assuming you join on slug
+    $this->db->join('articles', 'articles.slug = article_submission.slug'); // corrected join condition
     $this->db->where('articles.articleid', $articleid);
     $query = $this->db->get();
 
@@ -174,7 +174,6 @@ public function get_article_by_id($articleid) {
         return false;
     }
 }
-
 
 public function update_article_submission($articleid, $articleData) {
     // Set date_paid based on payment status
@@ -232,14 +231,28 @@ public function update_article_submission($articleid, $articleData) {
     }
 }
 
+public function get_published_count() {
+    $this->db->where('published', 1);
+    $this->db->from('volume');
+    return $this->db->count_all_results();
+}
+
+// Method to get the count of unpublished articles
+public function get_unpublished_count() {
+    $this->db->where('published', 0);
+    $this->db->from('volume');
+    return $this->db->count_all_results();
+}
+
 
 public function get_all_articles() {
-    $this->db->select('articles.articleid, articles.title, articles.keywords, articles.abstract, articles.filename, article_submission.filename, article_submission.payment, article_submission.date_paid, article_submission.review, article_submission.date_forwarded_review, article_submission.approved, article_submission.date_approved, article_submission.layout, article_submission.published, article_submission.date_published, article_submission.slug, authors.author_name, authors.email AS author_email, volume.vol_name AS volume_name'); // Include volume name
+    $this->db->select('articles.articleid, articles.title, articles.keywords, articles.abstract, articles.filename, article_submission.filename AS submission_filename, article_submission.payment, article_submission.date_paid, article_submission.review, article_submission.date_forwarded_review, article_submission.approved, article_submission.date_approved, article_submission.layout, article_submission.published, article_submission.date_published, article_submission.slug, authors.author_name, authors.email AS author_email, volume.vol_name AS volume_name'); // Include volume name
     $this->db->from('articles');
     $this->db->join('article_author', 'articles.articleid = article_author.articleid');
     $this->db->join('authors', 'article_author.audid = authors.audid');
     $this->db->join('article_submission', 'articles.slug = article_submission.slug');
     $this->db->join('volume', 'articles.volumeid = volume.volumeid', 'left'); // Assuming volumeid is the foreign key
+    $this->db->group_by('articles.articleid'); 
     $query = $this->db->get();
     return $query->result();
 }
@@ -273,7 +286,6 @@ public function getSubmittedArticleByUserId($user_id, $searchQuery = null) {
 }
 
 
-
 public function updateArticleSubmission($data, $submission_id) {
     // Apply the where condition to update the specific submission
     $this->db->where('submissionid', $submission_id);
@@ -286,7 +298,6 @@ public function updateArticleSubmission($data, $submission_id) {
     // Execute the update query
     return $this->db->update('article_submission');
 }
-
 
 
 public function getSubmissionIdBySlug($slug) {

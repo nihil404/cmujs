@@ -29,7 +29,6 @@
                 <!-- Your existing menu items -->
                 <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="<?php echo base_url('home/home_lp'); ?>">Home</a></li>
                 <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="<?php echo base_url('home/about_lp'); ?>">About</a></li>
-                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="<?php echo base_url('home/contact_lp'); ?>">Contact</a></li>
             </ul>
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <!-- Separate "Login" and "Register" links -->

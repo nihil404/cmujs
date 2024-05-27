@@ -34,6 +34,33 @@ class Author_model extends CI_Model {
             return null; // Return null if author ID is not found
         }       
     }
+    public function get_all_authors() {
+        $query = $this->db->get('authors');
+        return $query->result();
+    }
+
+    // Add new author
+    public function add_author($data) {
+        $this->db->insert('authors', $data);
+    }
+
+    // Get author by ID
+    public function get_author($audid) {
+        $query = $this->db->get_where('authors', array('audid' => $audid));
+        return $query->row();
+    }
+
+    // Update author
+    public function update_author($audid, $data) {
+        $this->db->where('audid', $audid);
+        $this->db->update('authors', $data);
+    }
+
+    // Delete author
+    public function delete_author($audid) {
+        $this->db->where('audid', $audid);
+        $this->db->delete('authors');
+    }
 
     public function getAuthorByUserId($user_id) {
         // Assuming you have a table named 'authors' with a column named 'uid'
